@@ -14,8 +14,9 @@ var gulp             = require("gulp"),
 
 	// js files
 	scripts          = {
-		main: "dev/js/main.js",
-		bootstrap: "vendor/bootstrap-sass/assets/javascripts/bootstrap.js"
+		jquery: "vendor/jquery/dist/jquery.js",
+		bootstrap: "vendor/bootstrap-sass/assets/javascripts/bootstrap.js",
+		main: "dev/js/main.js"
 	};
 
 /**

@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'remoto-icons';
+    src: url('../../icons/icomoon.eot?pld03o');
+    src: url('../../icons/icomoon.eot?pld03o#iefix') format('embedded-opentype'),
+         url('../../icons/icomoon.ttf?pld03o') format('truetype'),
+         url('../../icons/icomoon.woff?pld03o') format('woff'),
+         url('../../icons/icomoon.svg?pld03o#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$icon-elemento: "\e900";
+
+@mixin icon-content($content) {
+  &::before {
+    content: $content;
+  }
+}
+
+@mixin icon($content, $size: 30) {
+  @include icon-content($content);
+
+  &::before {
+    font-family: 'remoto-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: $size + px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
