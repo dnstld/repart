@@ -1,0 +1,21 @@
+{
+  "name": "Repart",
+  "description": "Incorporadora e construtora",
+  "main": "",
+  "authors": [
+    "denis toledo"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dnstld/repart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git#^3.3.6"
+  }
+}

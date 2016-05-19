@@ -8,14 +8,14 @@ var gulp             = require("gulp"),
 	rename           = require("gulp-rename"),
 	concatJS         = require("gulp-concat"),
 	minifyJS         = require("gulp-uglify"),
-	imageminPngquant = require("imagemin-pngquant"),
 	deleteLines      = require("gulp-delete-lines"),
 	insertLines      = require("gulp-insert-lines"),
 	plumber          = require("gulp-plumber"),
 
 	// js files
 	scripts          = {
-		main: "dev/js/main.js"
+		main: "dev/js/main.js",
+		bootstrap: "vendor/bootstrap-sass/assets/javascripts/bootstrap.js"
 	};
 
 /**
@@ -66,7 +66,8 @@ gulp.task("css", function() {
 
 gulp.task("js", function() {
 	return gulp.src([
-			scripts.main
+			scripts.main,
+			scripts.bootstrap
 		])
 		.pipe(concatJS("main.js"))
 		.pipe(rename({
