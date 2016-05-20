@@ -1,15 +1,16 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'remoto-icons';
-    src: url('../../icons/icomoon.eot?pld03o');
-    src: url('../../icons/icomoon.eot?pld03o#iefix') format('embedded-opentype'),
-         url('../../icons/icomoon.ttf?pld03o') format('truetype'),
-         url('../../icons/icomoon.woff?pld03o') format('woff'),
-         url('../../icons/icomoon.svg?pld03o#icomoon') format('svg');
+    font-family: 'icomoon';
+    src:    url('../../fonts/icomoon.eot?pld03o');
+    src:    url('../../fonts/icomoon.eot?pld03o#iefix') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?pld03o') format('truetype'),
+        url('../../fonts/icomoon.woff?pld03o') format('woff'),
+        url('../../fonts/icomoon.svg?pld03o#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
+
 
 $icon-elemento: "\e900";
 
@@ -23,7 +24,7 @@ $icon-elemento: "\e900";
   @include icon-content($content);
 
   &::before {
-    font-family: 'remoto-icons' !important;
+    font-family: 'icomoon' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;

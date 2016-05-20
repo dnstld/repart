@@ -67,8 +67,9 @@ gulp.task("css", function() {
 
 gulp.task("js", function() {
 	return gulp.src([
-			scripts.main,
-			scripts.bootstrap
+			scripts.jquery,
+			scripts.bootstrap,
+			scripts.main
 		])
 		.pipe(concatJS("main.js"))
 		.pipe(rename({
@@ -100,7 +101,10 @@ gulp.task("html", function() {
 			"before": /<\/body>$/,
 			"lineBefore": '        <script src="dist/js/main.min.js"></script>'
 		}))
-		.pipe(gulp.dest("dist"))
+		.pipe(rename({
+			suffix: ".production"
+		}))
+		.pipe(gulp.dest("./"))
 });
 
 gulp.task("production", ["css","js", "html"]);
