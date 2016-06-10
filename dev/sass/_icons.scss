@@ -2,17 +2,19 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:    url('../../fonts/icomoon.eot?pld03o');
-    src:    url('../../fonts/icomoon.eot?pld03o#iefix') format('embedded-opentype'),
-        url('../../fonts/icomoon.ttf?pld03o') format('truetype'),
-        url('../../fonts/icomoon.woff?pld03o') format('woff'),
-        url('../../fonts/icomoon.svg?pld03o#icomoon') format('svg');
+    src:    url('../../fonts/icomoon.eot?cwu5ce');
+    src:    url('../../fonts/icomoon.eot?cwu5ce#iefix') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?cwu5ce') format('truetype'),
+        url('../../fonts/icomoon.woff?cwu5ce') format('woff'),
+        url('../../fonts/icomoon.svg?cwu5ce#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-
 $icon-elemento: "\e900";
+$icon-visao: "\e9ce";
+$icon-missao: "\f05c";
+$icon-valores: "\f0b6";
 
 @mixin icon-content($content) {
   &::before {
