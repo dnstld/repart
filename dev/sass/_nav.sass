@@ -1,14 +1,22 @@
 .navbar
-	.navbar-toggle
-		background-color: $logo-color
+	.container
+		.navbar-header
+			.navbar-toggle
+				background-color: $logo-color
 
-	.navbar-brand
-		+icon($icon-elemento, 15)
-		font-weight: bold
-		color: #fff
+			.navbar-brand
+				+icon($icon-elemento, 15)
+				font-weight: bold
+				color: #fff
 
-		&:before
-			vertical-align: inherit
-			color: $logo-color
-			
+				&:before
+					vertical-align: inherit
+					color: $logo-color
+		
+		.navbar-collapse
+			ul
+				li
+					&.active
+						a
+							cursor: default
 	
