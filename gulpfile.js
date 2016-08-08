@@ -52,10 +52,7 @@ gulp.task("default", ["browserSync", "sass"], function() {
 	gulp.watch("dev/js/**/*.js", browserSync.reload);
 });
 
-/**
- * production tasks
- * @command gulp production
- */
+// index.html
 gulp.task("css", function() {
 	return gulp.src("dev/css/main.css")
 		.pipe(minifyCSS())
@@ -81,7 +78,7 @@ gulp.task("js", function() {
 		.pipe(gulp.dest("dist/js"))
 });
 
-gulp.task("html", function() {
+gulp.task("index-html", function() {
 	return gulp.src("index.html")
 		.pipe(deleteLines({
 			"filters": [
@@ -107,4 +104,82 @@ gulp.task("html", function() {
 		.pipe(gulp.dest("./"))
 });
 
-gulp.task("production", ["css","js", "html"]);
+gulp.task("empresa-html", function() {
+	return gulp.src("empresa.html")
+		.pipe(deleteLines({
+			"filters": [
+				/<link\s+rel=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/head>$/,
+			"lineBefore": '        <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">',
+		}))
+		.pipe(deleteLines({
+			"filters": [
+				/<script\s+src=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/body>$/,
+			"lineBefore": '        <script src="dist/js/main.min.js"></script>'
+		}))
+		.pipe(rename({
+			suffix: ".production"
+		}))
+		.pipe(gulp.dest("./"))
+});
+
+gulp.task("empreendimentos-html", function() {
+	return gulp.src("empreendimentos.html")
+		.pipe(deleteLines({
+			"filters": [
+				/<link\s+rel=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/head>$/,
+			"lineBefore": '        <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">',
+		}))
+		.pipe(deleteLines({
+			"filters": [
+				/<script\s+src=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/body>$/,
+			"lineBefore": '        <script src="dist/js/main.min.js"></script>'
+		}))
+		.pipe(rename({
+			suffix: ".production"
+		}))
+		.pipe(gulp.dest("./"))
+});
+
+gulp.task("contato-html", function() {
+	return gulp.src("contato.html")
+		.pipe(deleteLines({
+			"filters": [
+				/<link\s+rel=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/head>$/,
+			"lineBefore": '        <link rel="stylesheet" type="text/css" href="dist/css/main.min.css">',
+		}))
+		.pipe(deleteLines({
+			"filters": [
+				/<script\s+src=/i
+			]
+		}))
+		.pipe(insertLines({
+			"before": /<\/body>$/,
+			"lineBefore": '        <script src="dist/js/main.min.js"></script>'
+		}))
+		.pipe(rename({
+			suffix: ".production"
+		}))
+		.pipe(gulp.dest("./"))
+});
+
+gulp.task("production", ["css","js", "index-html", "empresa-html", "empreendimentos-html", "contato-html"]);
