@@ -1,6 +1,6 @@
 .navbar
 	.container
-		.navbar-header
+		> .navbar-header
 			.navbar-toggle
 				background-color: $logo-color
 
@@ -13,10 +13,19 @@
 					vertical-align: inherit
 					color: $logo-color
 		
-		.navbar-collapse
-			ul
+		> .navbar-collapse
+			> .main-menu
 				li
 					&.active
 						a
 							cursor: default
+
+			> .social-menu
+				li
+					a
+						&.facebook
+							+icon($icon-facebook, 20)
+
+						&.youtube
+							+icon($icon-youtube, 20)
 	

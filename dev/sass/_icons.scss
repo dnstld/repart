@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'icomoon';
-    src:    url('../../fonts/icomoon.eot?4kyu24');
-    src:    url('../../fonts/icomoon.eot?4kyu24#iefix') format('embedded-opentype'),
-        url('../../fonts/icomoon.ttf?4kyu24') format('truetype'),
-        url('../../fonts/icomoon.woff?4kyu24') format('woff'),
-        url('../../fonts/icomoon.svg?4kyu24#icomoon') format('svg');
+    src:    url('../../fonts/icomoon.eot?imo4ug');
+    src:    url('../../fonts/icomoon.eot?imo4ug#iefix') format('embedded-opentype'),
+        url('../../fonts/icomoon.ttf?imo4ug') format('truetype'),
+        url('../../fonts/icomoon.woff?imo4ug') format('woff'),
+        url('../../fonts/icomoon.svg?imo4ug#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,6 +16,8 @@ $icon-mail: "\e901";
 $icon-map: "\e902";
 $icon-phone: "\e903";
 $icon-waze: "\e904";
+$icon-facebook: "\e905";
+$icon-youtube: "\e906";
 
 @mixin icon-content($content) {
   &::before {
