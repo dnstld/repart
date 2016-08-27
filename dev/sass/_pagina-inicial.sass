@@ -8,3 +8,78 @@
 .missao
 	h3
 		color: $logo-color
+
+.footer
+	background-color: #222
+
+	.wrapper
+		background-color: #f1f1f1
+
+		> .container
+			> .row
+				@media (max-width: 767px)
+					text-align: center
+
+				.marca
+					.logo
+						width: 100%
+						font-weight: 900
+						margin-bottom: 20px
+
+						.elemento
+							+icon($icon-elemento, 28)
+							color: $logo-color
+							display: inline-block
+							vertical-align: text-bottom
+
+							@media (min-width: 750px)
+								+icon($icon-elemento, 25)
+
+							@media (min-width: 1170px)
+								+icon($icon-elemento, 36)
+
+						.nome
+							font-size: 36px
+
+							@media (min-width: 750px)
+								font-size: 30px
+
+							@media (min-width: 1170px)
+								font-size: 40px
+
+						.sub
+							font-weight: 100
+							font-size: 14px
+							display: block
+
+							@media (min-width: 750px)
+								font-size: 11.9px
+
+							@media (min-width: 1170px)
+								font-size: 16px
+
+				.endereco
+					address
+						line-height: 150%
+
+						.icon-map
+							+icon($icon-map, 15)
+
+				.contatos
+					.icon-phone
+						+icon($icon-phone, 15)
+
+					.icon-mail
+						+icon($icon-mail, 15)
+
+					.icon-waze
+						+icon($icon-waze, 15)
+
+					.icon-map
+						+icon($icon-map, 15)
+
+	.copyright
+		margin: 10px
+
+		.denistoledo
+			color: $logo-color
