@@ -16,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git#^3.3.6"
+    "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git#^3.3.6",
+    "jquery-validation": "^1.15.1"
   }
 }

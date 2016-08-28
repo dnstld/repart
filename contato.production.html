@@ -38,7 +38,7 @@
 		<!-- formulario de contato -->
 		<div class="container contato">
 			<div class="row">
-				<div class="col-xs-12 col-md-5">
+				<div class="col-xs-12 col-sm-6">
 					<address>
 						<span class="icon-map"></span> Av. da Amizade, 2371<br>
 						Chácaras Bela Vista - Sumaré/SP<br>
@@ -60,22 +60,22 @@
 						<span class="icon-mail"></span> <a href="mailto:diego@repartinc.com.br">diego@repartinc.com.br</a>
 					</address>
 				</div>
-				<div class="col-xs-12 col-md-5">
-					<form>
-						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Nome">
+				<div class="col-xs-12 col-sm-6">
+					<form method="POST" id="formulario">
+						<div class="form-group has-success">
+							<input type="text" id="nome" class="form-control" name="nome" placeholder="Nome">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email">
+							<input type="email" id="email" class="form-control" name="email" placeholder="Email">
 						</div>
 						<div class="form-group">
-							<input type="phone" class="form-control" placeholder="Telefone">
+							<input type="phone" id="telefone" class="form-control" name="phone" placeholder="Telefone">
 						</div>
 						<div class="form-group">
-							<textarea class="form-control" rows="3" placeholder="Mensagem"></textarea>
+							<textarea id="mensagem" class="form-control" rows="3" name="mensagem" placeholder="Mensagem"></textarea>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-success">Enviar</button>
+							<button type="submit" class="btn btn-success btn-enviar">Enviar</button>
 						</div>
 					</form>
 				</div>
@@ -83,7 +83,7 @@
 		</div>
 		<div class="container-fluid mapa">
 			<div class="container">
-				<div class="row">
+				<div class="row hidden-md hidden-lg">
 					<div class="btn-group btn-group-justified" role="group" aria-label="...">
 						<div class="btn-group" role="group">
 							<a href="waze://?ll=-22.81535,-47.241893&navigate=yes" class="btn btn-primary" target="_blank"><span class="icon-waze"></span></a>
@@ -93,7 +93,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="hidden-xs row">
+				<div class="row hidden-xs">
 					<div class="embed-responsive embed-responsive-16by9">
 						<iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJm9Nix5e9yJQR9H4gY6HqMp0&key=AIzaSyA2agQTBsvjaC0eCYYnhlW42v99ciVCs_k" allowfullscreen></iframe>
 					</div>

@@ -16,6 +16,7 @@ var gulp             = require("gulp"),
 	scripts          = {
 		jquery: "vendor/jquery/dist/jquery.js",
 		bootstrap: "vendor/bootstrap-sass/assets/javascripts/bootstrap.js",
+		validate: "vendor/jquery-validation/dist/jquery.validate.js",
 		main: "dev/js/main.js"
 	};
 
@@ -66,6 +67,7 @@ gulp.task("js", function() {
 	return gulp.src([
 			scripts.jquery,
 			scripts.bootstrap,
+			scripts.validate,
 			scripts.main
 		])
 		.pipe(concatJS("main.js"))
