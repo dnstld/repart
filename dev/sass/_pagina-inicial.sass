@@ -1,10 +1,16 @@
 .cover
 	background-image: url(./../../assets/images/cover.jpg)
-	background-attachment: fixed
+	background-attachment: scroll
 	background-position: center
 	background-repeat: no-repeat
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
 	background-size: cover
 	margin-bottom: 0
+
+	@media (min-width: 767px)
+		background-attachment: fixed
 
 	.elemento-logo
 		+icon($icon-elemento, 120)
