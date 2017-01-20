@@ -5874,6 +5874,8 @@ body {
     .cover {
       background-attachment: fixed; } }
   .cover .elemento-logo {
+    opacity: 0;
+    visibility: hidden;
     display: block;
     font-weight: bold;
     margin-top: 3em;
